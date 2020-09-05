@@ -10,7 +10,7 @@ namespace Store_Manager_APP
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new DashboardPage();
         }
 
         protected override void OnStart()

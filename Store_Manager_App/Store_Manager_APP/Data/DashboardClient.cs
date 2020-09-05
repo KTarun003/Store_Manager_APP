@@ -20,7 +20,7 @@ namespace Store_Manager_APP.Data
 
         // API Calls :
 
-        // Get : Dashboard
+        // Get : Dashboard (One)
         public async Task<Dashboard> GetDashboardAsync()
         {
             Dashboard dashboardData = null;
