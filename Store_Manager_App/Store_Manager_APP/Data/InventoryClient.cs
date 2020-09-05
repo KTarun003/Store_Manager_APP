@@ -68,7 +68,7 @@ namespace Store_Manager_APP.Data
         }
 
         //Post : Inventory/id (One Item)
-        public async Task PostItemAsync(string id,Inventory inventory)
+        public async Task PostItemAsync(Inventory inventory)
         {
 
             string json = JsonConvert.SerializeObject(inventory);
