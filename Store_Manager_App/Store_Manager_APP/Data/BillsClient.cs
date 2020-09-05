@@ -11,7 +11,7 @@ namespace Store_Manager_APP.Data
 {
     public class BillsClient
     {
-        HttpClient _client;
+        private readonly HttpClient _client;
 
         public BillsClient()
         {
