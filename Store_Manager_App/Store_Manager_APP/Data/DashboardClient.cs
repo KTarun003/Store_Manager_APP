@@ -18,7 +18,7 @@ namespace Store_Manager_APP.Data
             _client = new HttpClient();
         }
 
-        // API Calls Here :
+        // API Calls :
 
         // Get : Dashboard
         public async Task<Dashboard> GetDashboardAsync()
