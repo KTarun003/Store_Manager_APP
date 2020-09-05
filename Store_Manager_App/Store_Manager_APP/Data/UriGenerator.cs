@@ -13,6 +13,11 @@ namespace Store_Manager_APP.Data
             return BaseUri + controller + "/" + id;
         }
 
+        internal static string GetUri(string controller, string id)
+        {
+            return BaseUri + controller + "/" + id;
+        }
+
         internal static string GetUri(string controller)
         {
             return BaseUri + controller;
