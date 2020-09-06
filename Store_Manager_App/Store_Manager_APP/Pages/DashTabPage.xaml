@@ -4,18 +4,97 @@
              xmlns:views="clr-namespace:Store_Manager_APP.Views;assembly=Store_Manager_APP"
              x:Class="Store_Manager_APP.Pages.DashTabPage">
     <ContentPage.Content>
-        <StackLayout Orientation="Vertical">
-            <ListView x:Name="ListView" 
-                      HasUnevenRows="True"  
-                      ItemsSource="{Binding dashList}" >
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
-                            <views:CardViewTemplate/>
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
+        <StackLayout Margin="20">
+            <Frame Grid.Row="0" 
+                   CornerRadius="15"
+                   HorizontalOptions="Fill"
+                   Padding="8"
+                   BackgroundColor="#d96c6c">
+                <StackLayout>
+                    <Label Text="Total No of Items in Stock:"
+                           FontSize="Medium"
+                           FontAttributes="Bold" />
+                    <BoxView Color="Wheat"
+                             HeightRequest="2"
+                             HorizontalOptions="Fill" />
+                    <Label  Text="{Binding TotalItems}" />
+                </StackLayout>
+            </Frame>
+            <Frame Grid.Row="0" 
+                   CornerRadius="15"
+                   HorizontalOptions="Fill"
+                   Padding="8"
+                   BackgroundColor="#a17cf2">
+                <StackLayout>
+                    <Label Text="Total Worth of Stock:"
+                           FontSize="Medium"
+                           FontAttributes="Bold" />
+                    <BoxView Color="Wheat"
+                             HeightRequest="2"
+                             HorizontalOptions="Fill" />
+                    <Label  Text="{Binding TotalWorth}" />
+                </StackLayout>
+            </Frame>
+            <Frame Grid.Row="0" 
+                   CornerRadius="15"
+                   HorizontalOptions="Fill"
+                   Padding="8"
+                   BackgroundColor="#03cafc">
+                <StackLayout>
+                    <Label Text="Total No Of Bills:"
+                           FontSize="Medium"
+                           FontAttributes="Bold" />
+                    <BoxView Color="Wheat"
+                             HeightRequest="2"
+                             HorizontalOptions="Fill" />
+                    <Label  Text="{Binding TotalBills}"/>
+                </StackLayout>
+            </Frame>
+            <Frame Grid.Row="0" 
+                   CornerRadius="15"
+                   HorizontalOptions="Fill"
+                   Padding="8"
+                   BackgroundColor="#c1cc5c">
+                <StackLayout>
+                    <Label Text="Total Amount Received:"
+                           FontSize="Medium"
+                           FontAttributes="Bold" />
+                    <BoxView Color="Wheat"
+                             HeightRequest="2"
+                             HorizontalOptions="Fill" />
+                    <Label   Text="{Binding TotalAmount}" />
+                </StackLayout>
+            </Frame>
+            <Frame Grid.Row="0" 
+                   CornerRadius="15"
+                   HorizontalOptions="Fill"
+                   Padding="8"
+                   BackgroundColor="#63b89a">
+                <StackLayout>
+                    <Label Text="No of Bills in This Month:"
+                           FontSize="Medium"
+                           FontAttributes="Bold" />
+                    <BoxView Color="Wheat"
+                             HeightRequest="2"
+                             HorizontalOptions="Fill" />
+                    <Label  Text="{Binding MonthlyBills}"/>
+                </StackLayout>
+            </Frame>
+            <Frame Grid.Row="0" 
+                   CornerRadius="15"
+                   HorizontalOptions="Fill"
+                   Padding="8"
+                   BackgroundColor="#d98999">
+                <StackLayout>
+                    <Label Text="Amount Received in This Month:"
+                           FontSize="Medium"
+                           FontAttributes="Bold" />
+                    <BoxView Color="Wheat"
+                             HeightRequest="2"
+                             HorizontalOptions="Fill" />
+                    <Label   Text="{Binding MonthlyAmount}" />
+                </StackLayout>
+            </Frame>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

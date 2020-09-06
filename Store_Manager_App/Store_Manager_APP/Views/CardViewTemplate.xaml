@@ -18,11 +18,10 @@
                      iOS="10"/>
             </Frame.Margin>
             <StackLayout Orientation="Horizontal">
-                <BoxView Color="{Binding HasVote}" WidthRequest="6"/>
                 <Grid VerticalOptions="CenterAndExpand"  
-                 Padding="0"  
-                 HorizontalOptions="FillAndExpand"  
-                 BackgroundColor="Transparent">
+                      Padding="0"  
+                      HorizontalOptions="FillAndExpand"  
+                      BackgroundColor="Transparent">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*"/>
                         <RowDefinition Height="Auto"/>

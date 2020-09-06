@@ -9,7 +9,7 @@ using Store_Manager_APP.Models;
 
 namespace Store_Manager_APP.Data
 {
-    class DashboardClient
+    public class DashboardClient
     {
         private readonly HttpClient _client;
 

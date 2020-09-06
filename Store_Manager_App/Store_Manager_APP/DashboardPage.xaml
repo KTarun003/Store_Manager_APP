@@ -4,17 +4,17 @@
              xmlns:pages="clr-namespace:Store_Manager_APP.Pages;assembly=Store_Manager_APP"
              x:Class="Store_Manager_APP.DashboardPage">
   <!--Pages can be added as references or inline-->
-  <NavigationPage Title="Dashboard" BackgroundColor="AliceBlue" >
+    <NavigationPage Title="Dashboard" BackgroundColor="#83edf2" >
       <x:Arguments>
           <pages:DashTabPage />
       </x:Arguments>
     </NavigationPage>
-  <NavigationPage Title="Inventory" BackgroundColor="AliceBlue" >
+    <NavigationPage Title="Inventory" BackgroundColor="#83edf2" >
       <x:Arguments>
           <pages:InventoryTabPage />
       </x:Arguments>
     </NavigationPage>
-  <NavigationPage Title="Bills" BackgroundColor="AliceBlue" >
+    <NavigationPage Title="Bills" BackgroundColor="#83edf2" >
       <x:Arguments>
           <pages:BillsTabPage />
       </x:Arguments>

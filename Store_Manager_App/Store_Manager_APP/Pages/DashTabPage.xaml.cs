@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Store_Manager_APP.Data;
+using Store_Manager_APP.Models;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -15,6 +16,14 @@ namespace Store_Manager_APP.Pages
         public DashTabPage()
         {
             InitializeComponent();
+        }
+
+        protected override async void OnAppearing()
+        {
+            base.OnAppearing();
+            DashboardClient dashboardClient = new DashboardClient();
+            Dashboard dashboard = await dashboardClient.GetDashboardAsync();
+            BindingContext =dashboard;
         }
     }
 }
