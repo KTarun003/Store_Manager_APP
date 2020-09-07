@@ -68,7 +68,7 @@ namespace Store_Manager_APP.Data
         //Post : Inventory/id (One Item)
         public async Task PostItemAsync(Inventory inventory)
         {
-
+            inventory.Id = Guid.NewGuid().ToString();
             string json = JsonConvert.SerializeObject(inventory);
             StringContent content = new StringContent(json, Encoding.UTF8, "application/json");
             HttpResponseMessage response = await _client.PostAsync(UriGenerator.GetUri("inventory"), content);
