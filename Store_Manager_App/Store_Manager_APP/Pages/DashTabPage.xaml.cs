@@ -26,14 +26,20 @@ namespace Store_Manager_APP.Pages
             BindingContext =dashboard;
         }
 
-        private void OnItemAddClicked(object sender, EventArgs e)
+        private async void OnItemAddClicked(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            await Navigation.PushAsync(new AddItemPage
+            {
+                BindingContext = new Inventory()
+            });
         }
 
-        private void OnBillCreate(object sender, EventArgs e)
+        private async void OnBillCreate(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            await Navigation.PushAsync(new CreateBillPage
+            {
+                BindingContext = new Bills()
+            });
         }
     }
 }

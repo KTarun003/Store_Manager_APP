@@ -28,14 +28,23 @@ namespace Store_Manager_APP.Pages
             BillsList.ItemsSource = trends;
         }
 
-        private void OnListViewBillSelected(object sender, SelectedItemChangedEventArgs e)
+        private async void OnListViewBillSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            throw new NotImplementedException();
+            if (e.SelectedItem != null)
+            {
+                await Navigation.PushAsync(new BillDetailsPage
+                {
+                    BindingContext = e.SelectedItem as Bills
+                });
+            }
         }
 
-        private void OnBillCreateClicked(object sender, EventArgs e)
+        private async void OnBillCreateClicked(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+           await Navigation.PushAsync(new CreateBillPage
+           {
+               BindingContext = new Bills()
+           });
         }
     }
 }

@@ -19,9 +19,12 @@ namespace Store_Manager_APP.Pages
             InitializeComponent();
         }
 
-        public void OnItemAddClicked(object sender, EventArgs eventArgs)
+        public async void OnItemAddClicked(object sender, EventArgs eventArgs)
         {
-            Navigation.PushAsync(new AddItemPage());
+           await Navigation.PushAsync(new AddItemPage
+           {
+               BindingContext = new Inventory()
+           });
         }
 
         protected override async void OnAppearing()
@@ -35,9 +38,15 @@ namespace Store_Manager_APP.Pages
 
         }
 
-        private void OnListViewItemSelected(object sender, SelectedItemChangedEventArgs e)
+        private async void OnListViewItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            throw new NotImplementedException();
+            if (e.SelectedItem != null)
+            {
+                await Navigation.PushAsync(new ItemDetailsPage
+                {
+                    BindingContext = e.SelectedItem as Inventory
+                });
+            }
         }
     }
 }
