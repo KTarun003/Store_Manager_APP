@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:views="clr-namespace:Store_Manager_APP.Views;assembly=Store_Manager_APP"
              x:Class="Store_Manager_APP.Pages.DashTabPage">
     <ContentPage.ToolbarItems>
         <ToolbarItem Text=" Add Item "
@@ -14,7 +13,7 @@
             <Frame CornerRadius="15"
                    HorizontalOptions="Fill"
                    Padding="8"
-                   BackgroundColor="#d96c6c">
+                   BackgroundColor="#f0a732">
                 <StackLayout>
                     <Label Text="Total No of Items in Stock:"
                            FontSize="Medium"
@@ -28,7 +27,7 @@
             <Frame CornerRadius="15"
                    HorizontalOptions="Fill"
                    Padding="8"
-                   BackgroundColor="#a17cf2">
+                   BackgroundColor="#f0a732">
                 <StackLayout>
                     <Label Text="Total Worth of Stock:"
                            FontSize="Medium"
@@ -42,7 +41,7 @@
             <Frame CornerRadius="15"
                    HorizontalOptions="Fill"
                    Padding="8"
-                   BackgroundColor="#03cafc">
+                   BackgroundColor="#f0a732">
                 <StackLayout>
                     <Label Text="Total No Of Bills:"
                            FontSize="Medium"
@@ -56,7 +55,7 @@
             <Frame CornerRadius="15"
                    HorizontalOptions="Fill"
                    Padding="8"
-                   BackgroundColor="#c1cc5c">
+                   BackgroundColor="#f0a732">
                 <StackLayout>
                     <Label Text="Total Amount Received:"
                            FontSize="Medium"
@@ -70,7 +69,7 @@
             <Frame CornerRadius="15"
                    HorizontalOptions="Fill"
                    Padding="8"
-                   BackgroundColor="#63b89a">
+                   BackgroundColor="#f0a732">
                 <StackLayout>
                     <Label Text="No of Bills in This Month:"
                            FontSize="Medium"
@@ -84,7 +83,7 @@
             <Frame CornerRadius="15"
                    HorizontalOptions="Fill"
                    Padding="8"
-                   BackgroundColor="#d98999">
+                   BackgroundColor="#f0a732">
                 <StackLayout>
                     <Label Text="Amount Received in This Month:"
                            FontSize="Medium"

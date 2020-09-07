@@ -3,10 +3,91 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Store_Manager_APP.Pages.ItemDetailsPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Item Detail Page"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout Margin="20,40,20,20">
+            <Label FontSize="Title"
+                   HorizontalOptions="CenterAndExpand"
+                   TextColor="White">Item Details</Label>
+            <StackLayout Margin="0,60,0,0">
+                <Frame CornerRadius="15"
+                   HorizontalOptions="Fill"
+                   Padding="8"
+                   BackgroundColor="#c1cc5c">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="4*"/>
+                            <RowDefinition Height="4*"/>
+                            <RowDefinition Height="4*"/>
+                            <RowDefinition Height="4*"/>
+                            <RowDefinition Height="4*"/>
+                            <RowDefinition Height="4*"/>
+                            <RowDefinition Height="4*"/>
+                        </Grid.RowDefinitions>
+                        <Label Grid.Row="0" Grid.Column="0"
+                               Text="Name : "
+                               FontSize="Medium"/>
+                        <Label Grid.Row="0" Grid.Column="1"
+                               Text="{Binding Name}"
+                               FontSize="Medium"/>
+                        <Label Grid.Row="1" Grid.Column="0"
+                               Text="Type : "
+                               FontSize="Medium"/>
+                        <Label Grid.Row="1" Grid.Column="1"
+                               Text="{Binding Type}"
+                               FontSize="Medium"/>
+                        <Label Grid.Row="2" Grid.Column="0"
+                               Text="Size : "
+                               FontSize="Medium"/>
+                        <Label Grid.Row="2" Grid.Column="1"
+                               Text="{Binding Size}"
+                               FontSize="Medium"/>
+                        <Label Grid.Row="3" Grid.Column="0"
+                               Text="Cost : "
+                               FontSize="Medium"/>
+                        <Label Grid.Row="3" Grid.Column="1"
+                               Text="{Binding Cost}"
+                               FontSize="Medium"/>
+                        <Label Grid.Row="4" Grid.Column="0"
+                               Text="Price : "
+                               FontSize="Medium"/>
+                        <Label Grid.Row="4" Grid.Column="1"
+                               Text="{Binding Price}"
+                               FontSize="Medium"/>
+                        <Label Grid.Row="5" Grid.Column="0"
+                               Text="Quantity : "
+                               FontSize="Medium"/>
+                        <Label Grid.Row="5" Grid.Column="1"
+                               Text="{Binding Quantity}"
+                               FontSize="Medium"/>
+                        <Label Grid.Row="6" Grid.Column="0"
+                               Text="Location : "
+                               FontSize="Medium"/>
+                        <Label Grid.Row="6" Grid.Column="1"
+                               Text="{Binding Location}"
+                               FontSize="Medium"/>
+                    </Grid>
+                </Frame>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Column="0" 
+                        Text="Update"
+                        CornerRadius="15"
+                        BackgroundColor="CornflowerBlue"
+                        TextColor="White"/>
+                    <Button Grid.Column="1" 
+                        Text="Delete"
+                        CornerRadius="15"
+                        BackgroundColor="Red"
+                        TextColor="White"/>
+                </Grid>
+            </StackLayout>
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
