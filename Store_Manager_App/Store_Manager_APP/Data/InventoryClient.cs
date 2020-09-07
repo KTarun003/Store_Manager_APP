@@ -29,12 +29,10 @@ namespace Store_Manager_APP.Data
             if (response.IsSuccessStatusCode)
             {
                 string content = await response.Content.ReadAsStringAsync();
-                return JsonConvert.DeserializeObject<List<Inventory>>(content);
+                List<Inventory> temp = JsonConvert.DeserializeObject<List<Inventory>>(content);
+                return temp;
             }
-            else
-            {
-                return new List<Inventory>();
-            }
+            return new List<Inventory>();
         }
 
         //Get : Inventory/id (One Item)

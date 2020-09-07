@@ -31,4 +31,5 @@ namespace Store_Manager_APP.Models
         [JsonProperty("location")]
         public string Location { get; set; }
     }
+
 }

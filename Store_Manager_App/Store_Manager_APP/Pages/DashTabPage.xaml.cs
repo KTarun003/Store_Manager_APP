@@ -25,5 +25,15 @@ namespace Store_Manager_APP.Pages
             Dashboard dashboard = await dashboardClient.GetDashboardAsync();
             BindingContext =dashboard;
         }
+
+        private void OnItemAddClicked(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void OnBillCreate(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
