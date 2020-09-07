@@ -22,10 +22,10 @@ namespace Store_Manager_APP.Data
 
         //Get : Bills (All)
 
-        public async Task<List<Bills>> GetInventoryAsync()
+        public async Task<List<Bills>> GetBillsAsync()
         {
 
-            HttpResponseMessage response = await _client.GetAsync(UriGenerator.GetUri("inventory"));
+            HttpResponseMessage response = await _client.GetAsync(UriGenerator.GetUri("bills"));
             if (response.IsSuccessStatusCode)
             {
                 string content = await response.Content.ReadAsStringAsync();
@@ -38,7 +38,7 @@ namespace Store_Manager_APP.Data
         }
 
         //Get : Inventory/id (One Item)
-        public async Task<Bills> GetItemAsync(string id)
+        public async Task<Bills> GetBillAsync(string id)
         {
 
             HttpResponseMessage response = await _client.GetAsync(UriGenerator.GetUri("bills", id));
@@ -54,7 +54,7 @@ namespace Store_Manager_APP.Data
         }
 
         //Put : Inventory/id (One Item)
-        public async Task PutItemAsync(string id, Bills bill)
+        public async Task PutBillAsync(string id, Bills bill)
         {
 
             string json = JsonConvert.SerializeObject(bill);
@@ -68,7 +68,7 @@ namespace Store_Manager_APP.Data
         }
 
         //Post : Inventory/id (One Item)
-        public async Task PostItemAsync(Bills inventory)
+        public async Task PostBillAsync(Bills inventory)
         {
 
             string json = JsonConvert.SerializeObject(inventory);
@@ -81,7 +81,7 @@ namespace Store_Manager_APP.Data
         }
 
         //Delete : Inventory/id (One Item)
-        public async Task DeleteItemAsync(string id)
+        public async Task DeleteBillAsync(string id)
         {
 
             HttpResponseMessage response = await _client.DeleteAsync(UriGenerator.GetUri("bills", id));

@@ -30,7 +30,7 @@ namespace Store_Manager_APP.Pages
             InventoryClient inventoryClient = new InventoryClient();
             List<Inventory> inventory = await inventoryClient.GetInventoryAsync();
             var trends = new ObservableCollection<Inventory>(inventory);
-            MyList.ItemsSource = trends;
+            InventoryList.ItemsSource = trends;
 
 
         }

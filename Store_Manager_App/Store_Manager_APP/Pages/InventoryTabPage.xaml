@@ -8,7 +8,7 @@
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout Margin="20">
-            <ListView x:Name="MyList"
+            <ListView x:Name="InventoryList"
                       HasUnevenRows="true"
                       ItemSelected="OnListViewItemSelected">
                 <ListView.ItemTemplate >
@@ -18,7 +18,7 @@
                                 <Frame CornerRadius="15"
                                        HorizontalOptions="Fill"
                                        Padding="8"
-                                       BackgroundColor="#d96c6c">
+                                       BackgroundColor="#c1cc5c">
                                     <StackLayout>
                                         <Grid>
                                             <Grid.ColumnDefinitions>
