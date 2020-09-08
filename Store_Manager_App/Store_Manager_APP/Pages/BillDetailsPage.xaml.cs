@@ -23,14 +23,21 @@ namespace Store_Manager_APP.Pages
         {
             base.OnAppearing();
             Bills bill = (Bills)BindingContext;
+            List<Item> items = new List<Item>();
             InventoryClient inventoryClient = new InventoryClient();
-            List<Inventory> items = new List<Inventory>();
-            foreach (var item in bill.Items)
+            List<Inventory> inventory = await inventoryClient.GetInventoryAsync();
+            foreach (var billItem in bill.Items)
             {
-                Inventory content = await inventoryClient.GetItemAsync(item.ItemId);
-                items.Add(content);
+                foreach (var item in inventory)
+                {
+                    if (!item.Id.Equals(billItem.ItemId)) continue;
+                    billItem.Name = item.Name;
+                    billItem.Type = item.Type;
+                    billItem.Size = item.Size;
+                    billItem.Price = item.Price;
+                }
             }
-            ItemsList.ItemsSource = items;
+            ItemsList.ItemsSource = bill.Items;
         }
     }
 }

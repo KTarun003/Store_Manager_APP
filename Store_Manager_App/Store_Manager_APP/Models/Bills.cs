@@ -4,19 +4,37 @@ using System.Text;
 using Newtonsoft.Json;
 namespace Store_Manager_APP.Models
 {
-    public class Items
+    public class Item
     {
         [JsonProperty("itemId")]
         public string ItemId { get; set; }
 
         [JsonProperty("billId")]
-        public int BillId { get; set; }
+        public string BillId { get; set; }
+
+        [JsonProperty("quantity")]
+        public int Quantity { get; set; }
+
+        public string Name { get; set; }
+
+        public string Type { get; set; }
+
+        public string Size { get; set; }
+
+        public double Price { get; set; }
     }
 
     public class Bills
     {
+
+        public Bills()
+        {
+            Id = Guid.NewGuid().ToString();
+            Items = new List<Item>();
+        }
+
         [JsonProperty("id")]
-        public int Id { get; set; }
+        public string Id { get; set; }
 
         [JsonProperty("name")]
         public string Name { get; set; }
@@ -24,8 +42,8 @@ namespace Store_Manager_APP.Models
         [JsonProperty("location")]
         public string Location { get; set; }
 
-        [JsonProperty("quantity")]
-        public int Quantity { get; set; }
+        [JsonProperty("totalQuantity")]
+        public int TotalQuantity { get; set; }
 
         [JsonProperty("amount")]
         public float Amount { get; set; }
@@ -34,7 +52,7 @@ namespace Store_Manager_APP.Models
         public DateTime BillDate { get; set; }
 
         [JsonProperty("items")] 
-        public List<Items> Items { get; set; }
+        public List<Item> Items { get; set; }
 
     }
 }

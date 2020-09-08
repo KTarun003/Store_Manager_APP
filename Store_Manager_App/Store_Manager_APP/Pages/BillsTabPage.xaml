@@ -43,7 +43,7 @@
                                                 <ColumnDefinition Width="*" />
                                                 <ColumnDefinition Width="*" />
                                             </Grid.ColumnDefinitions>
-                                            <Label Grid.Column="0"  Text="{Binding Quantity}" />
+                                            <Label Grid.Column="0"  Text="{Binding TotalQuantity}" />
                                             <Label Grid.Column="0"  Text="   Items" />
                                             <Label Grid.Column="1" Text="{Binding Location}" />
                                             <Label Grid.Column="2"  Text="{Binding BillDate}" />

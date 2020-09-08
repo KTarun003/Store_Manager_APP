@@ -49,12 +49,12 @@
                     <Picker Grid.Row="2" Grid.Column="1" Title="Select Size"
                             SelectedItem="{Binding Size}">
                         <Picker.Items>
-                            <x:String>1 Kg</x:String>
-                            <x:String>500 Gm</x:String>
-                            <x:String>250 Gm</x:String>
-                            <x:String>100 Gm</x:String>
-                            <x:String>50 Gm</x:String>
-                            <x:String>₹5 Packet</x:String>
+                            <x:String>1Kg</x:String>
+                            <x:String>500Gm</x:String>
+                            <x:String>250Gm</x:String>
+                            <x:String>100Gm</x:String>
+                            <x:String>50Gm</x:String>
+                            <x:String>₹5Packet</x:String>
                         </Picker.Items>
                     </Picker>
                     <Label Grid.Row="3" Grid.Column="0"

@@ -40,7 +40,7 @@
                                Text="Total No of Items : "
                                FontSize="Medium"/>
                     <Label Grid.Row="2" Grid.Column="1"
-                               Text="{Binding Quantity}"
+                               Text="{Binding TotalQuantity}"
                                FontSize="Medium"/>
                     <Label Grid.Row="3" Grid.Column="0"
                                Text="Total Amount : "
