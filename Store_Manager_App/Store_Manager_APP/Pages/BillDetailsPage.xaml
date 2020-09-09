@@ -121,6 +121,7 @@
                         Text="Delete"
                         CornerRadius="15"
                         BackgroundColor="Red"
+                        Clicked="DeleteClicked"
                         TextColor="White"/>
             </Grid>
         </StackLayout>

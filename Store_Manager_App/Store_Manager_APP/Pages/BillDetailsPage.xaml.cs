@@ -39,5 +39,20 @@ namespace Store_Manager_APP.Pages
             }
             ItemsList.ItemsSource = bill.Items;
         }
+
+        public async void DeleteClicked(object sender, EventArgs e)
+        {
+            var confirm = await DisplayAlert("Confirm", "Are you sure you Want to Delete this Bill?", "Yes", "No");
+            if (confirm)
+            {
+                BillsClient billsClient = new BillsClient();
+                Bills bill = (Bills) BindingContext;
+                await billsClient.DeleteBillAsync(bill.Id);
+                await Navigation.PopAsync();
+            }
+
+            await Navigation.PopAsync();
+
+        }
     }
 }
