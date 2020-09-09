@@ -112,11 +112,6 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
-                <Button Grid.Column="0" 
-                        Text="Update"
-                        CornerRadius="15"
-                        BackgroundColor="CornflowerBlue"
-                        TextColor="White"/>
                 <Button Grid.Column="1" 
                         Text="Delete"
                         CornerRadius="15"

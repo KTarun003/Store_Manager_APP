@@ -32,5 +32,13 @@ namespace Store_Manager_APP.Pages
             await Navigation.PopAsync();
 
         }
+
+        public async void UpdateClicked(object sender, EventArgs e)
+        {
+            InventoryClient inventoryClient = new InventoryClient();
+            Inventory inventory = (Inventory) BindingContext;
+            await inventoryClient.PutItemAsync(inventory.Id, inventory);
+            await Navigation.PopAsync();
+        }
     }
 }
